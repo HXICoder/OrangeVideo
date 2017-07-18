@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BaseNavigationController.h
 //  OrangeVideo
 //
 //  Created by xing on 2017/7/18.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface BaseNavigationController : UINavigationController
 
 @end
-
