@@ -20,7 +20,12 @@
     
 }
 
-
-
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    UIBarButtonItem *backBarItem = [[UIBarButtonItem alloc] init];
+    backBarItem.title = @"返回";
+    viewController.navigationItem.backBarButtonItem = backBarItem;
+    
+    [super pushViewController:viewController animated:animated];
+}
 
 @end

@@ -1,0 +1,16 @@
+//
+//  PrefixHeader.pch
+//  OrangeVideo
+//
+//  Created by xing on 2017/7/19.
+//  Copyright © 2017年 xing. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIColor+UIColor_Extension.h"
+#import "Common.h"
+#import "HXNetManager.h"
+
+#endif /* PrefixHeader_pch */

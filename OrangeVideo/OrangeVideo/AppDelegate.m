@@ -18,7 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-   
+    [self setupTabBarNavigationBarAppearance];
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     self.window.rootViewController = [[HXTabBarController alloc] init];
@@ -27,6 +28,15 @@
     
     
     return YES;
+}
+
+- (void)setupTabBarNavigationBarAppearance {
+    [[UINavigationBar appearance] setBarTintColor:ColorWithRGB(6, 163, 243, 1)];
+    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]} forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : ColorWithRGB(6, 163, 243, 1)} forState:UIControlStateSelected];
 }
 
 
