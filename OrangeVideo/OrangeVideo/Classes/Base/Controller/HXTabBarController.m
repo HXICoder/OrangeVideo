@@ -9,6 +9,7 @@
 #import "HXTabBarController.h"
 #import "BaseNavigationController.h"
 #import "MainViewController.h"
+#import "LiveViewController.h"
 
 @interface HXTabBarController ()
 
@@ -25,23 +26,23 @@
 }
 
 - (void)setupViewControllers {
-    MainViewController *mainVC = [[MainViewController alloc] init];
-    BaseNavigationController *navVC = [[BaseNavigationController alloc] initWithRootViewController:mainVC];
-    mainVC.navigationItem.title = @"首页";
+    UINavigationController * nav1 = [self addChildViewController:[[MainViewController alloc] init] title:@"首页" imageName:@"tab_home" imageNameSel:@"tab_home_s"];
+    
+    UINavigationController * nav2 = [self addChildViewController:[[LiveViewController alloc] init] title:@"直播" imageName:@"tab_home" imageNameSel:@"tab_home_s"];
+    
+    [self setViewControllers:@[nav1, nav2]];
+}
 
-    navVC.tabBarItem.title = @"首页";
-    navVC.tabBarItem.image = [UIImage imageNamed:@"tab_home"];
-    navVC.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_home_s"];
+- (UINavigationController *)addChildViewController:(UIViewController *)childController title:(NSString *)title imageName:(NSString *)imageName imageNameSel:(NSString *)imageNameSel {
+    childController.navigationItem.title = title;
     
-    MainViewController *mainVC2 = [[MainViewController alloc] init];
-    BaseNavigationController *navVC2 = [[BaseNavigationController alloc] initWithRootViewController:mainVC2];
-    mainVC2.navigationItem.title = @"首页";
+    BaseNavigationController *navVC = [[BaseNavigationController alloc] initWithRootViewController:childController];
+    navVC.tabBarItem.title = title;
+    navVC.tabBarItem.image = [UIImage imageNamed:imageName];
+    navVC.tabBarItem.selectedImage = [UIImage imageNamed:imageNameSel];
     
-    navVC2.tabBarItem.title = @"首页";
-    navVC2.tabBarItem.image = [UIImage imageNamed:@"tab_home"];
-    navVC2.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_home_s"];
-    
-    [self setViewControllers:@[navVC, navVC2]];
+    return navVC;
+//    [self addChildViewController:navVC];
 }
 
 @end

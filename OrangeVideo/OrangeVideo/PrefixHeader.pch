@@ -9,7 +9,6 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#import "UIColor+UIColor_Extension.h"
 #import "Common.h"
 #import "HXNetManager.h"
 
