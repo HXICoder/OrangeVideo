@@ -16,7 +16,7 @@
     if ([data isKindOfClass:[NSDictionary class]]) {
         baseModel.code = [[data objectForKey:@"code"] integerValue];
         baseModel.info = [data objectForKey:@"info"];
-        baseModel.data = [data objectForKey:@"data"];
+        baseModel.data = [data objectForKey:@"data"] == nil ? data : [data objectForKey:@"data"];
         
     } else if ([data isKindOfClass:[NSArray class]]) {
         baseModel.code = Success;

@@ -53,7 +53,7 @@ NSString *homeVideoCellId = @"homeVideoCellId";
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    self.coverImgView.frame = CGRectMake(edgeSpace, edgeSpace, width, cellheight - edgeSpace);
+    self.coverImgView.frame = CGRectMake(edgeSpace, edgeSpace * 0.5, width, cellheight - edgeSpace);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

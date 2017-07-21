@@ -26,14 +26,13 @@
 }
 
 - (void)setupViewControllers {
-    UINavigationController * nav1 = [self addChildViewController:[[MainViewController alloc] init] title:@"首页" imageName:@"tab_home" imageNameSel:@"tab_home_s"];
+    [self addChildViewController:[[MainViewController alloc] init] title:@"首页" imageName:@"tab_home" imageNameSel:@"tab_home_s"];
     
-    UINavigationController * nav2 = [self addChildViewController:[[LiveViewController alloc] init] title:@"直播" imageName:@"tab_home" imageNameSel:@"tab_home_s"];
+    [self addChildViewController:[[LiveViewController alloc] init] title:@"直播" imageName:@"tab_home" imageNameSel:@"tab_home_s"];
     
-    [self setViewControllers:@[nav1, nav2]];
 }
 
-- (UINavigationController *)addChildViewController:(UIViewController *)childController title:(NSString *)title imageName:(NSString *)imageName imageNameSel:(NSString *)imageNameSel {
+- (void)addChildViewController:(UIViewController *)childController title:(NSString *)title imageName:(NSString *)imageName imageNameSel:(NSString *)imageNameSel {
     childController.navigationItem.title = title;
     
     BaseNavigationController *navVC = [[BaseNavigationController alloc] initWithRootViewController:childController];
@@ -41,8 +40,7 @@
     navVC.tabBarItem.image = [UIImage imageNamed:imageName];
     navVC.tabBarItem.selectedImage = [UIImage imageNamed:imageNameSel];
     
-    return navVC;
-//    [self addChildViewController:navVC];
+    [self addChildViewController:navVC];
 }
 
 @end

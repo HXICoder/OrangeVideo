@@ -21,21 +21,36 @@ static HXNetManager *netManager = nil;
     return netManager;
 }
 
+#pragma mark - 请求游戏类型
 - (void)requestGames:(responseBlock)block {
     [[HXNetClient shareInstance] requestDataWithPath:kGamesApi parameters:nil method:Get block:^(id responseObject, NSError *error) {
         block(responseObject, error);
     }];
 }
 
+#pragma mark - 首页数据
 - (void)requestHomeAttentionData:(int)random games:(NSString *)games timestamp:(NSString *)timestamp page:(int)p limit:(int)limit block:(responseBlock)block {
     NSDictionary *dic = @{@"random" : [NSString stringWithFormat:@"%d", random],
                           @"games" : games,
                           @"timestamp" : timestamp,
                           @"p" : [NSString stringWithFormat:@"%d", p],
-                          @"limit" : [NSString stringWithFormat:@"%d", limit]};
+                          @"limit" : [NSString stringWithFormat:@"%d", limit]
+                          };
     
     
     [[HXNetClient shareInstance] requestDataWithPath:kHomeAttentionApi parameters:dic method:Get block:^(id responseObject, NSError *error) {
+        block(responseObject, error);
+    }];
+}
+
+#pragma mark - 主播数据
+- (void)requestAnchorData:(int)type index:(int)index size:(int)size block:(responseBlock)block {
+    NSDictionary *dic = @{
+                          @"type" : [NSString stringWithFormat:@"%d", type],
+                          @"index" : [NSString stringWithFormat:@"%d", index],
+                          @"size" : [NSString stringWithFormat:@"%d", size]
+                          };
+    [[HXNetClient shareInstance] requestDataWithPath:kAnchorApi parameters:dic method:Get block:^(id responseObject, NSError *error) {
         block(responseObject, error);
     }];
 }

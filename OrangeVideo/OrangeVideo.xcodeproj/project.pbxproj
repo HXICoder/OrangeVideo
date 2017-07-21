@@ -20,6 +20,9 @@
 		215C34BA1F1F85A100B2E867 /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 215C34B91F1F85A100B2E867 /* Action.m */; };
 		215C34BD1F1F85C400B2E867 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 215C34BC1F1F85C300B2E867 /* User.m */; };
 		215C34C01F1F8AC400B2E867 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 215C34BF1F1F8AC400B2E867 /* Video.m */; };
+		216C6E101F21C930007BEBE4 /* WaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 216C6E0F1F21C930007BEBE4 /* WaterFallLayout.m */; };
+		216C6E131F21DB78007BEBE4 /* AnchorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 216C6E121F21DB78007BEBE4 /* AnchorCell.m */; };
+		216C6E161F21EF9F007BEBE4 /* AnchorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 216C6E151F21EF9F007BEBE4 /* AnchorModel.m */; };
 		217369DB1F20503E00AAE2C1 /* HomeVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 217369DA1F20503E00AAE2C1 /* HomeVideoCell.m */; };
 		217369E21F20A49800AAE2C1 /* LiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 217369E11F20A49800AAE2C1 /* LiveViewController.m */; };
 		21A6034E1F1E2C3D00D1D613 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A6034D1F1E2C3D00D1D613 /* main.m */; };
@@ -60,6 +63,12 @@
 		215C34BC1F1F85C300B2E867 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		215C34BE1F1F8AC400B2E867 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
 		215C34BF1F1F8AC400B2E867 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		216C6E0E1F21C930007BEBE4 /* WaterFallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterFallLayout.h; sourceTree = "<group>"; };
+		216C6E0F1F21C930007BEBE4 /* WaterFallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterFallLayout.m; sourceTree = "<group>"; };
+		216C6E111F21DB78007BEBE4 /* AnchorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnchorCell.h; sourceTree = "<group>"; };
+		216C6E121F21DB78007BEBE4 /* AnchorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnchorCell.m; sourceTree = "<group>"; };
+		216C6E141F21EF9F007BEBE4 /* AnchorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnchorModel.h; sourceTree = "<group>"; };
+		216C6E151F21EF9F007BEBE4 /* AnchorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnchorModel.m; sourceTree = "<group>"; };
 		217369D91F20503E00AAE2C1 /* HomeVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVideoCell.h; sourceTree = "<group>"; };
 		217369DA1F20503E00AAE2C1 /* HomeVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVideoCell.m; sourceTree = "<group>"; };
 		217369E01F20A49800AAE2C1 /* LiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveViewController.h; sourceTree = "<group>"; };
@@ -154,12 +163,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		216C6E0A1F21C855007BEBE4 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				216C6E0E1F21C930007BEBE4 /* WaterFallLayout.h */,
+				216C6E0F1F21C930007BEBE4 /* WaterFallLayout.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		217369DC1F20A46800AAE2C1 /* Live */ = {
 			isa = PBXGroup;
 			children = (
 				217369DD1F20A46800AAE2C1 /* Controller */,
 				217369DE1F20A46800AAE2C1 /* Model */,
 				217369DF1F20A46800AAE2C1 /* View */,
+				216C6E0A1F21C855007BEBE4 /* Other */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -176,6 +195,8 @@
 		217369DE1F20A46800AAE2C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				216C6E141F21EF9F007BEBE4 /* AnchorModel.h */,
+				216C6E151F21EF9F007BEBE4 /* AnchorModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,6 +204,8 @@
 		217369DF1F20A46800AAE2C1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				216C6E111F21DB78007BEBE4 /* AnchorCell.h */,
+				216C6E121F21DB78007BEBE4 /* AnchorCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -450,8 +473,11 @@
 				215C34851F1F356100B2E867 /* HXNetClient.m in Sources */,
 				215C34C01F1F8AC400B2E867 /* Video.m in Sources */,
 				215C34B41F1F529E00B2E867 /* GameModel.m in Sources */,
+				216C6E161F21EF9F007BEBE4 /* AnchorModel.m in Sources */,
 				215C34AF1F1F504700B2E867 /* BaseViewController.m in Sources */,
 				21A603511F1E2C3D00D1D613 /* AppDelegate.m in Sources */,
+				216C6E101F21C930007BEBE4 /* WaterFallLayout.m in Sources */,
+				216C6E131F21DB78007BEBE4 /* AnchorCell.m in Sources */,
 				217369E21F20A49800AAE2C1 /* LiveViewController.m in Sources */,
 				215C34771F1F030D00B2E867 /* MainViewController.m in Sources */,
 				21A6034E1F1E2C3D00D1D613 /* main.m in Sources */,
