@@ -20,6 +20,10 @@
 		215C34BA1F1F85A100B2E867 /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 215C34B91F1F85A100B2E867 /* Action.m */; };
 		215C34BD1F1F85C400B2E867 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 215C34BC1F1F85C300B2E867 /* User.m */; };
 		215C34C01F1F8AC400B2E867 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 215C34BF1F1F8AC400B2E867 /* Video.m */; };
+		2163C2E51F2393E30091DE8F /* RoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2163C2E41F2393E30091DE8F /* RoomViewController.m */; };
+		2163C2E81F2393F40091DE8F /* RoomModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2163C2E71F2393F40091DE8F /* RoomModel.m */; };
+		2163C2EB1F23944D0091DE8F /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2163C2EA1F23944D0091DE8F /* IJKMediaFramework.framework */; };
+		2163C2ED1F2394690091DE8F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2163C2EC1F2394690091DE8F /* libz.tbd */; };
 		216C6E101F21C930007BEBE4 /* WaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 216C6E0F1F21C930007BEBE4 /* WaterFallLayout.m */; };
 		216C6E131F21DB78007BEBE4 /* AnchorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 216C6E121F21DB78007BEBE4 /* AnchorCell.m */; };
 		216C6E161F21EF9F007BEBE4 /* AnchorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 216C6E151F21EF9F007BEBE4 /* AnchorModel.m */; };
@@ -63,6 +67,12 @@
 		215C34BC1F1F85C300B2E867 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		215C34BE1F1F8AC400B2E867 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
 		215C34BF1F1F8AC400B2E867 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		2163C2E31F2393E30091DE8F /* RoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomViewController.h; sourceTree = "<group>"; };
+		2163C2E41F2393E30091DE8F /* RoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomViewController.m; sourceTree = "<group>"; };
+		2163C2E61F2393F40091DE8F /* RoomModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomModel.h; sourceTree = "<group>"; };
+		2163C2E71F2393F40091DE8F /* RoomModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomModel.m; sourceTree = "<group>"; };
+		2163C2EA1F23944D0091DE8F /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		2163C2EC1F2394690091DE8F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		216C6E0E1F21C930007BEBE4 /* WaterFallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterFallLayout.h; sourceTree = "<group>"; };
 		216C6E0F1F21C930007BEBE4 /* WaterFallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterFallLayout.m; sourceTree = "<group>"; };
 		216C6E111F21DB78007BEBE4 /* AnchorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnchorCell.h; sourceTree = "<group>"; };
@@ -91,7 +101,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2163C2ED1F2394690091DE8F /* libz.tbd in Frameworks */,
 				A0C6D19F9C5E1C28ABBAB246 /* libPods-OrangeVideo.a in Frameworks */,
+				2163C2EB1F23944D0091DE8F /* IJKMediaFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +175,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2163C2E91F23944D0091DE8F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2163C2EA1F23944D0091DE8F /* IJKMediaFramework.framework */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		216C6E0A1F21C855007BEBE4 /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +206,8 @@
 		217369DD1F20A46800AAE2C1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2163C2E31F2393E30091DE8F /* RoomViewController.h */,
+				2163C2E41F2393E30091DE8F /* RoomViewController.m */,
 				217369E01F20A49800AAE2C1 /* LiveViewController.h */,
 				217369E11F20A49800AAE2C1 /* LiveViewController.m */,
 			);
@@ -195,6 +217,8 @@
 		217369DE1F20A46800AAE2C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2163C2E61F2393F40091DE8F /* RoomModel.h */,
+				2163C2E71F2393F40091DE8F /* RoomModel.m */,
 				216C6E141F21EF9F007BEBE4 /* AnchorModel.h */,
 				216C6E151F21EF9F007BEBE4 /* AnchorModel.m */,
 			);
@@ -231,6 +255,7 @@
 		21A6034B1F1E2C3D00D1D613 /* OrangeVideo */ = {
 			isa = PBXGroup;
 			children = (
+				2163C2E91F23944D0091DE8F /* Resource */,
 				21A603641F1E374600D1D613 /* Classes */,
 				21A6034F1F1E2C3D00D1D613 /* AppDelegate.h */,
 				21A603501F1E2C3D00D1D613 /* AppDelegate.m */,
@@ -332,6 +357,7 @@
 		669F2BF4DE890B696FFA7588 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2163C2EC1F2394690091DE8F /* libz.tbd */,
 				B8C197EB717D713C0E172429 /* libPods-OrangeVideo.a */,
 			);
 			name = Frameworks;
@@ -473,6 +499,7 @@
 				215C34851F1F356100B2E867 /* HXNetClient.m in Sources */,
 				215C34C01F1F8AC400B2E867 /* Video.m in Sources */,
 				215C34B41F1F529E00B2E867 /* GameModel.m in Sources */,
+				2163C2E51F2393E30091DE8F /* RoomViewController.m in Sources */,
 				216C6E161F21EF9F007BEBE4 /* AnchorModel.m in Sources */,
 				215C34AF1F1F504700B2E867 /* BaseViewController.m in Sources */,
 				21A603511F1E2C3D00D1D613 /* AppDelegate.m in Sources */,
@@ -484,6 +511,7 @@
 				215C34A51F1F4D9900B2E867 /* BaseModel.m in Sources */,
 				215C34AE1F1F504700B2E867 /* BaseNavigationController.m in Sources */,
 				215C34B01F1F504700B2E867 /* HXTabBarController.m in Sources */,
+				2163C2E81F2393F40091DE8F /* RoomModel.m in Sources */,
 				215C348C1F1F421800B2E867 /* FileManager.m in Sources */,
 				217369DB1F20503E00AAE2C1 /* HomeVideoCell.m in Sources */,
 				215C34BA1F1F85A100B2E867 /* Action.m in Sources */,
@@ -613,6 +641,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 79U85WMWQ2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OrangeVideo/Resource",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = OrangeVideo/PrefixHeader.pch;
 				INFOPLIST_FILE = OrangeVideo/Info.plist;
@@ -631,6 +663,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 79U85WMWQ2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OrangeVideo/Resource",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = OrangeVideo/PrefixHeader.pch;
 				INFOPLIST_FILE = OrangeVideo/Info.plist;

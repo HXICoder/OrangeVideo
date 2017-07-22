@@ -29,7 +29,6 @@
     [self addChildViewController:[[MainViewController alloc] init] title:@"首页" imageName:@"tab_home" imageNameSel:@"tab_home_s"];
     
     [self addChildViewController:[[LiveViewController alloc] init] title:@"直播" imageName:@"tab_home" imageNameSel:@"tab_home_s"];
-    
 }
 
 - (void)addChildViewController:(UIViewController *)childController title:(NSString *)title imageName:(NSString *)imageName imageNameSel:(NSString *)imageNameSel {
@@ -41,6 +40,18 @@
     navVC.tabBarItem.selectedImage = [UIImage imageNamed:imageNameSel];
     
     [self addChildViewController:navVC];
+}
+
+-(BOOL)shouldAutorotate {
+    return self.selectedViewController.shouldAutorotate;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return self.selectedViewController.supportedInterfaceOrientations;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return self.selectedViewController.preferredInterfaceOrientationForPresentation;
 }
 
 @end

@@ -77,10 +77,10 @@ CGFloat edgeInsetMarge = 8;
             height = [self.dataSource cellHeight:self indexPath:indexPath];
         }
         
-        CGFloat minHeight = [[[self.cellHeights sortedArrayUsingSelector:@selector(compare:)] firstObject] floatValue];
-        NSInteger index = [self.cellHeights indexOfObject:@(minHeight)];
-        minHeight = minHeight + self.minimumLineSpacing + height;
-        self.cellHeights[index] = @(minHeight);
+        NSNumber *minHeight = [[self.cellHeights sortedArrayUsingSelector:@selector(compare:)] firstObject];
+        NSInteger index = [self.cellHeights indexOfObject:minHeight];
+        CGFloat tempHeight = [minHeight floatValue] + self.minimumLineSpacing + height;
+        self.cellHeights[index] = [NSNumber numberWithFloat:tempHeight];
         
         UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
         

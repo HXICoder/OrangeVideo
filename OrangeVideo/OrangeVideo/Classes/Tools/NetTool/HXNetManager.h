@@ -29,11 +29,30 @@
                            block:(responseBlock)block;
 
 /**
- 主播数据请求
+ 主播列表数据请求
  */
 - (void)requestAnchorData:(int)type
                     index:(int)index
                      size:(int)size
                     block:(responseBlock)block;
+
+/**
+ 获取房间信息
+
+ @param roomId 房间id
+ @param userId 用户id
+ */
+- (void)requestRoomData:(int)roomId
+                 userId:(NSString *)userId
+                   imei:(NSString *)imei
+              signature:(NSString *)signature
+                  block:(responseBlock)block;
+
+/**
+ 获取直播地址
+ @param urlString 请求路径
+ */
+- (void)requestLiveUrlData:(NSString *)urlString
+                     block:(responseBlock)block;
 
 @end

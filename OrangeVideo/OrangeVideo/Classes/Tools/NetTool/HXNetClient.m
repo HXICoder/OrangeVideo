@@ -38,6 +38,7 @@ static HXNetClient *netClient = nil;
     switch (method) {
         case Post: {
             [self POST:path parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                NSLog(@"%@", task.response.URL.absoluteString);
                 BaseModel *baseModel = [BaseModel handleResponseData:responseObject];
                 block(baseModel, nil);
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -47,6 +48,7 @@ static HXNetClient *netClient = nil;
             break;
         case Get: {
             [self GET:path parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                NSLog(@"%@", task.response.URL.absoluteString);
                 BaseModel *baseModel = [BaseModel handleResponseData:responseObject];
                 block(baseModel, nil);
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

@@ -43,7 +43,7 @@ static HXNetManager *netManager = nil;
     }];
 }
 
-#pragma mark - 主播数据
+#pragma mark - 主播列表数据请求
 - (void)requestAnchorData:(int)type index:(int)index size:(int)size block:(responseBlock)block {
     NSDictionary *dic = @{
                           @"type" : [NSString stringWithFormat:@"%d", type],
@@ -51,6 +51,26 @@ static HXNetManager *netManager = nil;
                           @"size" : [NSString stringWithFormat:@"%d", size]
                           };
     [[HXNetClient shareInstance] requestDataWithPath:kAnchorApi parameters:dic method:Get block:^(id responseObject, NSError *error) {
+        block(responseObject, error);
+    }];
+}
+
+#pragma mark - 获取房间信息
+- (void)requestRoomData:(int)roomId userId:(NSString *)userId imei:(NSString *)imei signature:(NSString *)signature block:(responseBlock)block {
+    NSDictionary *dic = @{
+                          @"roomId" : [NSString stringWithFormat:@"%d", roomId],
+                          @"userId" : userId,
+                          @"imei" : imei,
+                          @"signature" : signature
+                          };
+    [[HXNetClient shareInstance] requestDataWithPath:kRoomApi parameters:dic method:Get block:^(id responseObject, NSError *error) {
+        block(responseObject, error);
+    }];
+}
+
+#pragma mark - 获取直播url
+- (void)requestLiveUrlData:(NSString *)urlString block:(responseBlock)block {
+    [[HXNetClient shareInstance] requestDataWithPath:urlString parameters:nil method:Get block:^(id responseObject, NSError *error) {
         block(responseObject, error);
     }];
 }

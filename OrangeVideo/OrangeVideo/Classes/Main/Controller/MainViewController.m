@@ -48,6 +48,7 @@
         _tableView.showsHorizontalScrollIndicator = NO;
         [_tableView registerClass:[HomeVideoCell class] forCellReuseIdentifier:homeVideoCellId];
         [self.view addSubview:_tableView];
+        _tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     }
     
     return _tableView;
@@ -132,5 +133,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
 
 @end

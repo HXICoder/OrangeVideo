@@ -10,6 +10,7 @@
 #import "WaterFallLayout.h"
 #import "AnchorCell.h"
 #import "AnchorModel.h"
+#import "RoomViewController.h"
 
 @interface LiveViewController () <UICollectionViewDelegate, UICollectionViewDataSource, WaterFallLayoutDataSource>
 
@@ -71,6 +72,8 @@
         [_collectionView registerClass:[AnchorCell class] forCellWithReuseIdentifier:anchorCellId];
         
         [self.view addSubview:_collectionView];
+        
+        _collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     }
     
     return _collectionView;
@@ -99,6 +102,12 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
     
+    AnchorModel *anchor = self.anchors[indexPath.item];
+    
+    RoomViewController *roomVC = [[RoomViewController alloc] init];
+    roomVC.anchor = anchor;
+    roomVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:roomVC animated:YES];
 }
 
 #pragma mark - WaterFallLayoutDataSource

@@ -37,6 +37,7 @@ NSString *anchorCellId = @"anchorCellId";
     
     self.coverImgView.layer.masksToBounds = YES;
     [self.contentView addSubview:self.coverImgView];
+
 }
 
 - (void)setModel:(AnchorModel *)model {
